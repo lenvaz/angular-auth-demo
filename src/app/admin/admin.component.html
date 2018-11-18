@@ -1,0 +1,5 @@
+<h1>Orders</h1>
+<ul>
+  <li *ngFor="let order of orders">{{order}}</li>
+  <li *ngIf="!orders || !orders.length">No orders available.</li>
+</ul>

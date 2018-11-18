@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4 align-center">
+    <form #f="ngForm" (ngSubmit)="login(f.value)">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" required ngModel #email="ngModel" name="email" class="form-control" id="email" placeholder="use email abc@.domain.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" required ngModel #password="ngModel" name="password" class="form-control" id="password"
+          placeholder="use password 1234">
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="isAdmin" ngModel #isAdmin="ngModel"> login as an Admin
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="f.invalid">Submit</button>
+    </form>
+  </div>
+</div>
